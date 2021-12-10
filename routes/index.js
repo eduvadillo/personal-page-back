@@ -40,9 +40,7 @@ router.get("/version", (req, res, next) => {
 });
 
 router.post("/version-back", (req, res, next) => {
-  const { versionLess } = req.body;
-
-  console.log(`soy el version less`, versionLess);
+  console.log(`soy el version less`);
 
   Version.find({ _id: ["61b1cc172b34fc1a17101e5c"] }).then((web) =>
     web[0].version === 1
